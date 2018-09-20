@@ -3,6 +3,7 @@ package goutils
 
 import (
   "bytes"
+  //"fmt"
 
   "net/http"
   "io/ioutil"
@@ -28,6 +29,7 @@ func makeRequestWithHeaders(url string, method string, data []byte, headers map[
   for k, v := range headers {
     req.Header.Add(k, v)
   }
+
 
   resp, err := client.Do(req)
   if err != nil {
